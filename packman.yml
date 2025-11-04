@@ -2,7 +2,8 @@ name: Generate pacman animation
 
 on:
   schedule: # execute every 12 hours
-    - cron: "0 */12 * * *" # Runs at the top of the hour, every 12 hours
+    # Runs at the top of the hour, every 12 hours
+    - cron: "0 */12 * * *" 
   
   workflow_dispatch: # Allows manual trigger from the Actions tab
 
@@ -29,9 +30,11 @@ jobs:
           # Uses your GitHub username detected automatically
           github_user_name: ${{ github.repository_owner }}
       
-      # 2. Commit and push the generated SVG file back to the 'main' branch
-      - name: Commit and Push changes
-        uses: stefanbuck/git-auto-commit-action@v5
+      # 2. COMMIT FIX: Use the reliable EndBug action to commit the generated file
+      - name: Commit and Push Pacman Graph
+        # Using a proven, reliable alternative action
+        uses: EndBug/add-and-commit@v9 
         with:
-          commit_message: "chore: Updated Pac-Man Contribution Graph"
-          # This action commits changes directly to the checked out branch (main)
+          message: "chore: Updated Pac-Man Contribution Graph (Fix)"
+          # Commits both the dark and light mode SVG files
+          add: 'pacman-contribution-graph*.svg' 
