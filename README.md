@@ -36,7 +36,8 @@
 </div>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://www.google.com/search?q=https://raw.githubusercontent.com/waveeyys/waveeyys/main/pacman-contribution-graph-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://www.google.com/search?q=https://raw.githubusercontent.com/waveeyys/waveeyys/main/pacman-contribution-graph.svg">
-  <img alt="pacman contribution graph" src="https://www.google.com/search?q=https://raw.githubusercontent.com/waveeyys/waveeyys/main/pacman-contribution-graph.svg">
+<!-- NOTE: Using the cdn.jsdelivr.net mirror to bypass GitHub's raw content caching -->
+<source media="(prefers-color-scheme: dark)" srcset="https://www.google.com/search?q=https://cdn.jsdelivr.net/gh/waveeyys/waveeyys%40main/pacman-contribution-graph-dark.svg">
+<source media="(prefers-color-scheme: light)" srcset="https://www.google.com/search?q=https://cdn.jsdelivr.net/gh/waveeyys/waveeyys%40main/pacman-contribution-graph.svg">
+<img alt="pacman contribution graph" src="https://www.google.com/search?q=https://cdn.jsdelivr.net/gh/waveeyys/waveeyys%40main/pacman-contribution-graph.svg">
 </picture>
